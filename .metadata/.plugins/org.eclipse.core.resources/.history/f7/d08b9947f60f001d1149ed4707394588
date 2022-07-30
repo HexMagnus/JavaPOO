@@ -12,7 +12,7 @@ public class Caneta {
 		System.out.println("Uma caneta " + this.cor);
 		System.out.println("Ponta " + this.ponta);
 		System.out.println("Ponta " + this.carga);
-		System.out.println("Está tampada? " +this.tampada);
+		System.out.println("está tampada? " +this.tampada);
 		
 	}
 		
