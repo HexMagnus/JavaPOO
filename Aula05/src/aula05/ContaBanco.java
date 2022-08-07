@@ -31,13 +31,16 @@ public class ContaBanco {
 			System.out.println("Conta nao pode ser fhcada porque ainda tem dinheiro");
 		}else if (this.getSaldo() < 0 ){
 			System.out.println("Conta nao pode ser fechada pois tem débito");
+		} else {
+			this.setStatus(false);
+			System.out.println("Conta fechada com sucesso!");
 		}
 		
 	}
 	
 	
 	public void depositar() {
-		
+		if (this.status)
 	}
 	
 	public void sacar() {
@@ -80,7 +83,7 @@ public class ContaBanco {
 		this.saldo = saldo;
 	}
 
-	public boolean isStatus() {
+	public boolean getStatus() {
 		return status;
 	}
 
