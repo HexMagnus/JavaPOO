@@ -20,6 +20,8 @@ public class ContaBanco {
 		} else if  (t =="CP"){
 			this.setSaldo =150;
 		}
+		
+		System.out.println("Conta aberta com sucesso");
 
 	}
 	
