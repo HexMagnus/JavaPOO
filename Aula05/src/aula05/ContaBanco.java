@@ -39,14 +39,38 @@ public class ContaBanco {
 	}
 	
 	
-	public void depositar() {
-		if (this.status)
+	public void depositar(float v) {
+		if (this.getStatus()) {
+		this.saldo = this.saldo +v;	 // trabalhando com atributos
+		this.setSaldo (this.getSaldo()+v); //trabando com métodos especiais
+		System.out.println("Depósito realizado com sucesso na conta" +this.getDono());
+		}else {
+		System.out.println("Impossível depositar em uma conta fechada");	
+		}
 	}
 	
-	public void sacar() {
-		
+	public void sacar(float v) {
+		if (this.getStatus()) {
+		if (this.getSaldo() >= v) {
+			this.setSaldo(this.getSaldo() - v );
+			System.out.println("Saque realizado na conta de  "+ this.getDono());
+			
+		}else {
+			System.out.println("Saldo insuficiente para saque");
+		}
+			
+		}else {
+			System.out.println("Impossível sacar de uma conta fechada");
 	}
+}
 	public void pagarMensal() {
+		int v;
+		if (this.getTipo() == "CC") {
+			v = 12;
+		} else if (this.getTipo() == "CP") {
+			v = 20;
+
+		}	
 		
 	}
 	
