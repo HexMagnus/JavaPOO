@@ -12,6 +12,16 @@ public class ContaBanco {
 	private boolean setStatus;
 	
 	//Metodos Personalizados
+	public void estadoAtual() {
+		System.out.println("---------------------");
+		System.out.println("Conta "+ this.getNumConta());
+		System.out.println("Tipo " + this.getTipo());
+		System.out.println("Dono " + this.getDono());
+		System.out.println("Saldo " + this.getSaldo());
+		System.out.println("Status "+ this.getStatus());
+	}
+	
+	
 	public void abrirConta(String t) {
 		this.setTipo(t);
 		this.setStatus(true);
@@ -64,7 +74,7 @@ public class ContaBanco {
 	}
 }
 	public void pagarMensal() {
-		int v;
+		int v = 0;
 		if (this.getTipo() == "CC") {
 			v = 12;
 		} else if (this.getTipo() == "CP") {
@@ -72,6 +82,12 @@ public class ContaBanco {
 
 		}	
 		
+		if(this.getStatus()) {
+			this.setSaldo(this.getSaldo() - v);
+			System.out.println("Mensalidade paga com sucesso por " + this.getDono());
+		}else{
+			System.out.println("Impossível pagar uma conta fechada");
+		}
 	}
 	
 	//Metodos Especiais
