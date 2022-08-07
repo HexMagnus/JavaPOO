@@ -25,10 +25,10 @@ public class ContaBanco {
 	public void abrirConta(String t) {
 		this.setTipo(t);
 		this.setStatus(true);
-		if ("CC".equals(t)) {
-			this.setSaldo = 50;
-		} else if  (t =="CP"){
-			this.setSaldo =150;
+		if (t == "CC") {
+			this.setSaldo(50);
+		} else if( t == "CP"){
+			this.setSaldo(150);
 		}
 		
 		System.out.println("Conta aberta com sucesso");
