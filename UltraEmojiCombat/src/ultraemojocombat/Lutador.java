@@ -29,8 +29,22 @@ public class Lutador {
 		
 	}
 	
-	public void empatarLutar() {
+	public void empatarLuta() {
 		
 	}
 	//Métodos Especiais
+
+	public Lutador(String no, String na, int id, float al, float pe, int vi, int de,
+			int em) {
+		super();
+		this.nome = no;
+		this.nacionalidade = na;
+		this.idade = id;
+		this.altura = al;
+		this.peso = pe;
+		this.vitorias = vi;
+		this.derrotas = de;
+		this.empates = em;
+	}
+	
 }
