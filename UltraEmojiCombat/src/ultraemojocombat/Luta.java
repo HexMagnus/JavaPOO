@@ -1,5 +1,7 @@
 package ultraemojocombat;
 
+import java.util.Random;
+
 public class Luta {
 	//Atributos
 	private Lutador desafiado;
@@ -24,7 +26,20 @@ public class Luta {
 	}
 	
 	public void lutar() {
-		
+		if (this.aprovada) {
+			System.out.println("###DESAFIADO###");
+			this.desafiado.apresentar();
+			System.out.println("DESAFIANTE");
+			this.desafiante.apresentar();
+			
+			
+			Random aleatorio = new Random();
+			
+			
+		}else {
+		System.out.println("A luta não pode acontecer!");
+	
+		}
 	}
 	
 	//Métodos Especiais
