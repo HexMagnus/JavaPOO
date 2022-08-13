@@ -8,7 +8,18 @@ public class Luta {
 	private boolean aprovada;
 	
 	//Métodos Públicos
-	public void marcarLuta() {
+	public void marcarLuta(Lutador l1, Lutador l2) {
+		if (l1.getCategoria().equals(l2.getCategoria())
+				&& l1 != l2){
+			this.aprovada = true;
+			this.desafiado = l1;
+			this.desafiante = l2;
+			
+		} else {
+			this.aprovada = false;
+			this.desafiado = null;
+			this.desafiante = null;
+		}
 		
 	}
 	
