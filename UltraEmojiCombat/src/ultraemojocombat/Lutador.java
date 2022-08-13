@@ -15,13 +15,13 @@ public class Lutador {
 	//Métodos Públicos
 	public void apresentar(){
 		System.out.println("---------------------------------------------------");
-		System.out.println("Chegou a hora!Apresentamos o lutador " + this.getNome());
+		System.out.println("Chegou a hora! Apresentamos o lutador " + this.getNome());
 		System.out.println("Diretamente de " + this.getNacionalidade());
-		System.out.println("com " + this.getIdade() + "anos " + this.altura );
-		System.out.println("pesando " + this.getPeso() +"Kg");
-		System.out.println(this.getVitorias() + "vitórias");
-		System.out.println(this.getDerrotas() + "derrotas e");
-		System.out.println(this.getEmpates() + "empates!");
+		System.out.println("com " + this.getIdade() + " anos " + this.altura );
+		System.out.println("pesando " + this.getPeso() +" Kg");
+		System.out.println(this.getVitorias() + " vitórias ");
+		System.out.println(this.getDerrotas() +  " derrotas  e ");
+		System.out.println(this.getEmpates() + " empates! ");
 	}
 	
 	public void status() {
