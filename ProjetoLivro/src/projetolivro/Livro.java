@@ -14,10 +14,12 @@ public class Livro implements Publicacao {
 	public String detalhes() {
 		
 		
-		return "Livro{" + "titulo=" + titulo +",autor="
-				+ autor +", totPaginas=" + totPaginas
+		return "Livro{" + "titulo=" + titulo +"\n,autor="
+				+ autor +"\n, totPaginas=" + totPaginas
 				+", pagAtual=" + pagAtual +", aberto="
-				+aberto + ",leitor=" + leitor +'}';
+				+aberto + "\n,leitor=" + leitor.getNome() +
+				",idade=" + leitor.getIdade() +
+				",sexo=" + leitor.getSexo() +'}';
 	}
 
 	public Livro(String titulo, String autor, int totPaginas, Pessoa leitor) {
@@ -82,7 +84,12 @@ public class Livro implements Publicacao {
 	
 	@Override
 	public void folhear(int p) {
-		this.pagAtual = p;	
+		if (p > this.totPaginas) {
+			this.pagAtual = 0;
+		}else {
+			this.pagAtual = p;
+		}
+		
 	}
 	
 	@Override
