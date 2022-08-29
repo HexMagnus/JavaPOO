@@ -5,3 +5,5 @@ public interface AcoesVideo {
 	public void pause();
 	public void like();
 }
+
+//Implementação de Interface
